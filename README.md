@@ -14,19 +14,19 @@ Structure:
 Screenshots:
 
 1. Inserting ToDo
-![ ](insert.png)
+![ ](Screenshots/insert.png)
 
 database reflection
-![ ](insertDB.png)
+![ ](Screenshots/insertDB.png)
 
 2. Update toDo
-![ ](update.png)
+![ ](Screenshots/update.png)
 
 database reflection
-![ ](updateDB.png)
+![ ](Screenshots/updateDB.png)
 
 3. Delete toDo
-![ ](delete.png)
+![ ](Screenshots/delete.png)
 
 database reflection
-![ ](deleteDB.png)
+![ ](Screenshots/deleteDB.png)
