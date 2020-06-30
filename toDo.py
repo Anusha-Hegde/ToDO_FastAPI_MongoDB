@@ -17,7 +17,7 @@ html = """
         <title>ToDo</title>
     </head>
     <body>
-        <h1>Insert your Todo</h1>
+        <h1>Edit your Todo</h1>
         <input type="text" id="name" autocomplete="off" placeholder="enter name"/>
         <input type="text" id="desc" autocomplete="off" placeholder="enter desc"/>
         <button onclick="addToDo()">Create</button>
