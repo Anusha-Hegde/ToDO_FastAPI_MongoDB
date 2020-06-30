@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo</title>
+    </head>
+    <body>
+        <h1>Edit your Todo</h1>
+        <input type="text" id="name" autocomplete="off" placeholder="enter name"/>
+        <input type="text" id="desc" autocomplete="off" placeholder="enter desc"/>
+        <button onclick="addToDo()">Create</button>
+        <button onclick="deleteToDo()">Delete</button>
+        <button onclick="update()">Update</button>
+		<p>
+		<ul>
+			<li>create: enter new name and description of toDo and click create,</li>
+			<li>update: click on update button to edit toDo,</li>
+			<li>delete: enter name and description of toDo and click delete,</li> 	
+		</ul>
+		</p>
+        <script>
+        	function addToDo() {
+        		name = document.getElementById("name").value
+            	desc = document.getElementById("desc").value
+				window.location = "http://127.0.0.4:5000/insert/" + name + "/" + desc;
+            }
+			function update(){
+				window.location = "http://127.0.0.4:5000/update"
+			}
+			function deleteToDo() {
+        		name = document.getElementById("name").value
+            	desc = document.getElementById("desc").value
+				window.location = "http://127.0.0.4:5000/delete/" + name + "/" + desc;
+            }
+                name.value = ''
+                desc.value = ''
+        </script>
+    </body>
+</html>

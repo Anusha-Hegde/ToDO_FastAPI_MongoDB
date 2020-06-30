@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo</title>
+    </head>
+    <body>
+        <h1>Insert your Todo</h1>
+        <input type="text" id="old_name" autocomplete="off" placeholder="enter old_name"/>
+        <input type="text" id="old_desc" autocomplete="off" placeholder="enter old_desc"/>
+		<br>
+        <input type="text" id="new_name" autocomplete="off" placeholder="enter new_name"/>
+        <input type="text" id="new_desc" autocomplete="off" placeholder="enter new_desc"/>
+		<br>
+		<button onclick="updateToDo()">Update</button>
+		<p>
+		click on update after entering name of toDo (description if needed)
+		</p>
+        <script>
+			function updateToDo() {
+        		old_name = document.getElementById("old_name").value
+            	old_desc = document.getElementById("old_desc").value
+				new_name = document.getElementById("new_name").value
+            	new_desc = document.getElementById("new_desc").value
+				window.location = "http://127.0.0.4:5000/update/" + old_name + "/" + old_desc + "/" + new_name + "/" + new_desc;
+            }
+        </script>
+    </body>
+</html>

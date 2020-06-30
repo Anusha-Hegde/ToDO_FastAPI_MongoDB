@@ -18,6 +18,13 @@ How to run:
 - open: 127.0.0.3/5000/
 
 
+Update: added login page:
+
+1. ![ ](Screenshots/login_page.png)
+
+2. ![ ](Screenshots/wrong_credentials.png)
+
+
 Screenshots:
 
 
