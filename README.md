@@ -24,7 +24,7 @@ Screenshots:
 1. {Front end} Insert
 ![ ](Screenshots/front_end_insert.png)
 
-1. {Front end} Update
+2. {Front end} Update
 ![ ](Screenshots/front_end_update.png)
 
 3. Inserting ToDo
