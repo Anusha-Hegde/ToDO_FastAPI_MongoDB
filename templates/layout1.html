@@ -21,15 +21,15 @@
         	function addToDo() {
         		name = document.getElementById("name").value
             	desc = document.getElementById("desc").value
-				window.location = "http://127.0.0.4:5000/insert/" + name + "/" + desc;
+				window.location = "http://127.0.0.1:5000/insert/" + name + "/" + desc;
             }
 			function update(){
-				window.location = "http://127.0.0.4:5000/update"
+				window.location = "http://127.0.0.1:5000/update"
 			}
 			function deleteToDo() {
         		name = document.getElementById("name").value
             	desc = document.getElementById("desc").value
-				window.location = "http://127.0.0.4:5000/delete/" + name + "/" + desc;
+				window.location = "http://127.0.0.1:5000/delete/" + name + "/" + desc;
             }
                 name.value = ''
                 desc.value = ''

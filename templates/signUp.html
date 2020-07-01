@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat</title>
+    </head>
+    <body>
+        <h1>Enter Details to Sign Up</h1>
+        <form action="" onsubmit="signUp(event)">
+            <input type="text" id="name" autocomplete="off" placeholder="UserID"/>
+            <input type="password" id="password" autocomplete="off" placeholder="Password"/>
+            <input type="text" id = "email" placeholder="emailId"/>
+            <button>signUp</button>
+        </form>
+        <script>
+            var ws = new WebSocket("ws://127.0.0.1:5000/signUp");
+            ws.onmessage = function(event) {
+                var message = event.data
+                window.alert(message)
+                window.location = "http://127.0.0.1:5000/"
+            };
+            function signUp(event) {
+                var name = document.getElementById("name").value
+                var password = document.getElementById("password").value
+                input = {'name' : name, 'password' : password}
+                ws.send(JSON.stringify(input))
+                name.value = ''
+                password.value = ''
+                event.preventDefault()
+            }
+        </script>
+    </body>
+</html>

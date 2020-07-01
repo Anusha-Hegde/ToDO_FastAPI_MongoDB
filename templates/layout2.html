@@ -13,7 +13,7 @@
 		<br>
 		<button onclick="updateToDo()">Update</button>
 		<p>
-		click on update after entering name of toDo (description if needed)
+		click on update after entering name and description of toDo
 		</p>
         <script>
 			function updateToDo() {
@@ -21,7 +21,7 @@
             	old_desc = document.getElementById("old_desc").value
 				new_name = document.getElementById("new_name").value
             	new_desc = document.getElementById("new_desc").value
-				window.location = "http://127.0.0.4:5000/update/" + old_name + "/" + old_desc + "/" + new_name + "/" + new_desc;
+				window.location = "http://127.0.0.1:5000/update/" + old_name + "/" + old_desc + "/" + new_name + "/" + new_desc;
             }
         </script>
     </body>

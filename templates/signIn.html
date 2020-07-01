@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat</title>
+    </head>
+    <body>
+        <h1>Log In Page</h1>
+        <input type="text" id="name" autocomplete="off" placeholder="UserID"/>
+        <input type="text" id="password" autocomplete="off" placeholder="Password"/>
+        <button onclick="signIn(event)">signIn</button><br>
+        New user?
+        <button onclick="parent.location='http://127.0.0.1:5000/signup'">signUp</button>
+        <script>
+            var ws = new WebSocket("ws://127.0.0.1:5000/signIn");
+            ws.onmessage = function(event) {
+                var message = event.data
+                if(message === "wrong credentials"){
+                    window.alert("could not log in")
+                }
+                else{
+                    window.alert("logged in successfully")
+                    window.location = "http://127.0.0.1:5000/insert"
+                }
+            };
+            function signIn(event) {            
+                var name = document.getElementById("name").value
+                var password = document.getElementById("password").value
+                input = {'name' : name, 'password' : password}
+                ws.send(JSON.stringify(input))
+                name.value = ''
+                password.value = ''
+                event.preventDefault()
+            };
+        </script>
+    </body>
+</html>
